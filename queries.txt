@@ -1,0 +1,395 @@
+Question 1:
+
+Write the queries for the following tasks:
+
+SQL>connect
+Enter user-name: system
+Enter password:****
+connected.
+
+SQL>create user Employee 
+ 2  identified by system;
+user created.
+
+SQL>create table employee_details
+ 2  (
+ 3  emp_id number(4),
+ 4  emp_name varchar2(20),
+ 5  job_name varchar2(20),
+ 6  manager_id number(7),
+ 7  hire_date date,
+ 8  salary number(7),
+ 9  dep_id number(5)
+ 10  );
+
+Table created.
+
+SQL>desc employee_details;
+
+Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMP_ID                                             NUMBER(4)
+ EMP_NAME                                           VARCHAR2(20)
+ JOB_NAME                                           VARCHAR2(20)
+ MANAGER_ID                                         NUMBER(7)
+ HIRE_DATE                                          DATE
+ SALARY                                             NUMBER(7)
+ DEP_ID                                             NUMBER(5)
+
+SQL>insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1
+Enter value for b: 'bhavya'
+Enter value for c: 'designer'
+Enter value for d: 10
+Enter value for e: '01-jan-20'
+Enter value for f: 50000
+Enter value for g: 1
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(1,'bhavya','manager',10,'01-jan-20',80000,1)
+
+1 row created.
+
+SQL>insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 2
+Enter value for b: 'hani'
+Enter value for c: 'manager'
+Enter value for d: 20
+Enter value for e: '01-feb-20'
+Enter value for f: 55000
+Enter value for g: 2
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(2,'hani','manager',20,'01-feb-20',55000,2)
+
+1 row created.
+
+SQL>insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 3
+Enter value for b: 'nischala'
+Enter value for c: 'pega trainer'
+Enter value for d: 30
+Enter value for e: '01-mar-20'
+Enter value for f: 60000
+Enter value for g: 3
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(3,'nischala','pega trainer',30,'01-mar-20',60000,3)
+
+1 row created.
+
+SQL>insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 4
+Enter value for b: 'aishu'
+Enter value for c: 'analyst'
+Enter value for d: 40
+Enter value for e: '01-apr-20'
+Enter value for f: 65000
+Enter value for g: 4
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(4,'aishu','analyst',40,'01-apr-20',65000,4)
+
+1 row created
+
+SQL>insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 5
+Enter value for b: 'renuka'
+Enter value for c: 'designer'
+Enter value for d: 50
+Enter value for e: '01-may-20'
+Enter value for f: 60000
+Enter value for g: 5
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(5,'renuka','designer',50,'01-may-20',60000,5)
+
+1 row created
+
+SQL>insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 6
+Enter value for b: 'rishitha'
+Enter value for c: 'analyst'
+Enter value for d: 60
+Enter value for e: '01-jun-20'
+Enter value for f: 50000
+Enter value for g: 6
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(6,'rishitha','analyst',60,'01-jun-20',50000,6)
+
+1 row created.
+
+SQL>insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 7
+Enter value for b: 'raj'
+Enter value for c: 'manager'
+Enter value for d: 70
+Enter value for e: '01-july-20'
+Enter value for f: 55000
+Enter value for g: 7
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(7,'raj','manager',70,'01-july-20',55000,7)
+
+1 row created.
+
+SQL>insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 8
+Enter value for b: 'radha'
+Enter value for c: 'developer'
+Enter value for d: 80
+Enter value for e: '01-aug-20'
+Enter value for f: 60000
+Enter value for g: 8
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(8,'radha','developer',80,'01-aug-20',60000,8)
+
+1 row created.
+
+SQL>insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 9
+Enter value for b: 'krishna'
+Enter value for c: 'analyst'
+Enter value for d: 90
+Enter value for e: '01-sep-20'
+Enter value for f: 60000
+Enter value for g: 9
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(9,'krishna','analyst',90,'01-sep-20',60000,9)
+
+1 row created.
+
+SQL>insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 10
+Enter value for b: 'varun'
+Enter value for c: 'analyst'
+Enter value for d: 89
+Enter value for e: '01-oct-20'
+Enter value for f: 65000
+Enter value for g: 10
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(10,'varun','analyst',89,'01-oct-20',65000,10)
+
+1 row created.
+
+SQL>select salary from employee_details;
+
+     SALARY
+-------------
+     50000
+     55000
+     60000
+     65000
+     60000
+     50000
+     55000
+     60000
+     60000
+     65000
+
+10 rows selected.
+
+SQL>select distinct job_name from employee_details;
+
+JOB_NAME
+----------
+pega trainer
+developer
+manager
+analyst
+designer
+
+SQL>update employee_details set salary=70000 where emp_name='raj';
+
+EMP_ID          EMP_NAME             JOB_NAME        MANAGER_ID   HIRE_DATE   SALARY     DEP_ID
+---------- -------------------- -------------------- ---------- --------- --------------------------
+         1       bhavya               designer            10     01-JAN-20    50000          1
+
+         2        hani                manager            20      01-FEB-20    55000          2
+
+         3       nischala             pega trainer       30      01-MAR-20    60000          3
+
+
+    EMP_ID     EMP_NAME             JOB_NAME          MANAGER_ID  HIRE_DATE    SALARY     DEP_ID
+---------- -------------------- -------------------- ---------- --------- --------------------------
+        4         aishu                analyst            40     01-APR-20      65000          4
+
+        5        renuka               designer            50     01-MAY-20     60000           5
+
+        6       rishitha             analyst              60     01-JUN-20      50000          6
+
+
+    EMP_ID    EMP_NAME             JOB_NAME          MANAGER_ID  HIRE_DATE  SALARY     DEP_ID
+---------- -------------------- -------------------- ---------- --------- ---------------------------
+         7      raj                  manager              70    01-JUL-20    70000          7
+
+         8      radha                developer            80     01-AUG-20   60000          8
+
+         9      krishna              analyst              90     01-SEP-20   60000          9
+
+
+    EMP_ID     EMP_NAME             JOB_NAME          MANAGER_ID  HIRE_DATE  SALARY     DEP_ID
+---------- -------------------- -------------------- ---------- --------- ----------------------------
+        10     varun                analyst               89     01-OCT-20    65000         10
+
+10 rows selected.
+
+
+Question 2:
+
+Write the queries for the following tasks:
+
+
+SQL>create user Football 
+ 2  identified by system;
+user created.
+
+SQL> create table FootballVenue
+  2  (
+  3  venue_id number(10),
+  4  venue_name varchar(20),
+  5  city_id number(10),
+  6  capacity number(7),
+  7   primary key(venue_id)
+  8  );
+
+Table created.
+
+SQL> insert into FootballVenue values(&a,&b,&c,&d);
+Enter value for a: 1
+Enter value for b: 'Italy'
+Enter value for c: 123
+Enter value for d: 1000
+old   1: insert into FootballVenue values(&a,&b,&c,&d)
+new   1: insert into FootballVenue values(1,'Italy',123,1000)
+
+1 row created.
+
+SQL>insert into FootballVenue values(&a,&b,&c,&d);
+Enter value for a: 2
+Enter value for b: 'Malaysia'
+Enter value for c: 234
+Enter value for d: 1200
+old   1: insert into FootballVenue values(&a,&b,&c,&d)
+new   1: insert into FootballVenue values(2,'Malaysia',234,1200)
+
+1 row created.
+
+SQL>insert into FootballVenue values(&a,&b,&c,&d);
+Enter value for a: 3
+Enter value for b: 'canada'
+Enter value for c: 345
+Enter value for d: 1400
+old   1: insert into FootballVenue values(&a,&b,&c,&d)
+new   1: insert into FootballVenue values(3,'canada',345,1400)
+
+1 row created.
+
+SQL>insert into FootballVenue values(&a,&b,&c,&d);
+Enter value for a: 4
+Enter value for b: 'singapore'
+Enter value for c: 456
+Enter value for d: 1500
+old   1: insert into FootballVenue values(&a,&b,&c,&d)
+new   1: insert into FootballVenue values(4,'singapore',456,1500)
+
+1 row created.
+
+SQL>insert into FootballVenue values(&a,&b,&c,&d);
+Enter value for a: 5
+Enter value for b: 'russia'
+Enter value for c: 567
+Enter value for d: 1600
+old   1: insert into FootballVenue values(&a,&b,&c,&d)
+new   1: insert into FootballVenue values(5,'russia',567,1600)
+
+1 row created.
+
+SQL>insert into FootballVenue values(&a,&b,&c,&d);
+Enter value for a: 6
+Enter value for b: 'France'
+Enter value for c: 678
+Enter value for d: 1700
+old   1: insert into FootballVenue values(&a,&b,&c,&d)
+new   1: insert into FootballVenue values(6,'France',678,1700)
+
+1 row created.
+
+SQL>insert into FootballVenue values(&a,&b,&c,&d);
+Enter value for a: 7
+Enter value for b: 'Germany'
+Enter value for c: 789
+Enter value for d: 1800
+old   1: insert into FootballVenue values(&a,&b,&c,&d)
+new   1: insert into FootballVenue values(7,'Germany',789,1800)
+
+1 row created.
+
+SQL>insert into FootballVenue values(&a,&b,&c,&d);
+Enter value for a: 8
+Enter value for b: 'Australia'
+Enter value for c: 780
+Enter value for d: 1560
+old   1: insert into FootballVenue values(&a,&b,&c,&d)
+new   1: insert into FootballVenue values(8,'Australia',780,1560)
+
+1 row created.
+
+SQL>insert into FootballVenue values(&a,&b,&c,&d);
+Enter value for a: 9
+Enter value for b: 'Turkey'
+Enter value for c: 879
+Enter value for d: 1489
+old   1: insert into FootballVenue values(&a,&b,&c,&d)
+new   1: insert into FootballVenue values(9,'Turkey',879,1489)
+
+1 row created.
+
+SQL>insert into FootballVenue values(&a,&b,&c,&d);
+Enter value for a: 10
+Enter value for b: 'Thailand'
+Enter value for c: 890
+Enter value for d: 1890
+old   1: insert into FootballVenue values(&a,&b,&c,&d)
+new   1: insert into FootballVenue values(10,'Thailand',890,1890)
+
+1 row created.
+
+SQL>select *from FootballVenue;
+
+  VENUE_ID VENUE_NAME              CITY_ID   CAPACITY
+---------- -------------------- ---------- ----------
+         1 Italy                       123       1000
+         2 Malaysia                    234       1200
+         3 canada                      345       1400
+         4 singapore                   456       1500
+         5 russia                      567       1600
+         6 France                      678       1700
+         7 Germany                     789       1800
+         8 Australia                   780       1560
+         9 Turkey                      879       1489
+        10 Thailand                    890       1890
+
+10 rows selected.
+
+SQL>select count (*) from FootballVenue;
+
+COUNT(*)
+----------
+   10
+
+SQL>select city_id,capacity from FootballVenue;
+
+   CITY_ID   CAPACITY
+---------- ----------
+       123       1000
+       234       1200
+       345       1400
+       456       1500
+       567       1600
+       678       1700
+       789       1800
+       780       1560
+       879       1489
+       890       1890
+
+10 rows selected.
+
+SQL>delete from FootballVenue where venue_name = 'Australia';
+
+1 row deleted.
+
